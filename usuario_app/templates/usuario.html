@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles1.css')}}"/>
+        <title>  Usuario </title>
+    </head>
+    <body>
+        <div class='titulo'>
+            <h1>
+                Usuario  {{usuario['id']}}
+            </h1>
+        </div>
+        <div class='cuerpo'>
+            <div class='datos'>
+                <div class='repor'> <h3>{{usuario['nombre']}}</h3></div>
+                <div class='repor'> <h3>{{usuario['apellido']}}</h3></div>
+                <div class='repor'><h3>{{usuario['email']}} </h3></div>
+                <div class='repor'>Creación: <spam>{{usuario['created_at']}} </spam></div>
+                <div class='repor'>Actulización: <spam>{{usuario['updated_at']}}</spam> </div>
+            </div>
+            
+            <div class='botones'>
+                <form action="/salir" method="GET">
+                    <button type="submit">
+                        Inicio
+                    </button>
+                </form>
+                <form action="/user/edit/{{usuario.id}}",method="GET">
+                    <button type="submit">
+                        Editar
+                    </button>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

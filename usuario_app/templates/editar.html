@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}"/>
+        <title> Ediar Usuario </title>
+    </head>
+    <body>
+        <h1>
+            Editar  Usuario  {{usuario['id']}}
+        </h1>
+            <div class='registrar'>
+            <form action="/usuario/edit/{{usuario['id']}}" method="POST" class='registro'>
+                <div class = 'item'>
+                    <label for="nombre">
+                        Nombre:
+                    </label> 
+                    <input type="text" id="nombre" name="nombre" />
+                </div>
+                <div class='item1'>
+                    <label for="apellido">
+                        Apellido:
+                    </label> 
+                    <input type="text" id="apellido" name="apellido" />
+                </div>
+                <div class='item2'>
+                    <label for="email">
+                        email:
+                    </label> 
+                    <input type="text" id="email" name="email" />
+                </div>
+                <button type="submit">
+                    Editar
+                </button>
+            </form>
+            <form class='ver' action="/user/{{usuario.id}}" method="GET" >
+                <button type="submit" />
+                    ver
+                </button>
+            </form>
+        </div>
+        
+    </body>
+</html>

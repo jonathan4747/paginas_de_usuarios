@@ -1,0 +1,29 @@
+.titulo{
+    text-align: center;
+}
+.cuerpo{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+.datos {
+    width: 500px;
+    margin-left: 400px;
+    border: solid gray;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: aliceblue;
+  }
+
+.botones{
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+}
+
+button{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}

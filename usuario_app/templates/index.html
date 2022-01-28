@@ -1,0 +1,60 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}"/>
+        <title> Lista Usuarios </title>
+    </head>
+    <body>
+        <h1>Lista Usuarios</h1>
+        <div class="cuerpo">
+            <table>
+                <thead>
+                    <tr>
+                        <th class='menu'>id</th>
+                        <th class='menu'>Nombre</th>
+                        <th class='menu'>Apellido</th>
+                        <th class='menu'>Email</th>
+                        <th class='menu'>Creación</th>
+                        <th class= 'menu'>Operaciones </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usuario  in usuarios %}
+                        <tr>
+                            <th class='datos'>{{usuario['id']}}</th>
+                            <th class='datos'>{{usuario['nombre']}}</th>
+                            <th class='datos'>{{usuario['apellido']}}</th>
+                            <th class='datos'>{{usuario['email']}} </th>
+                            <th class='datos'>{{usuario['created_at']}} </th>
+                            <th class='operacion'>
+                                <form class='pestaña' action="/user/{{usuario.id}}" method="GET" >
+                                    <button type="submit" />
+                                        ver
+                                    </button>
+                                </form>
+                                <form class='pestaña' action="/user/edit/{{usuario.id}}",method="GET">
+                                    <button type="submit" />
+                                        editar
+                                    </button>
+                                </form>
+                                <form class='pestaña' action="/usuario/eliminar/{{usuario.id}}", method="POST">
+                                    <button type="submit" />
+                                        eliminar
+                                    </button>
+                                </form>
+                            </th>
+
+                          </tr>                    
+                          {% endfor %}
+                      </tbody>
+            </table>        
+        </div>
+        <form action="/añadir" method="GET">
+            <button type="submit" />
+                añadir usuario
+            </button>
+        </form>
+    </body>
+</html>

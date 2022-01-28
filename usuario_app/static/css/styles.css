@@ -1,0 +1,75 @@
+body{
+    text-align: center;
+}
+
+h1{
+    color: gray;
+}
+.cuerpo{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    background-color: gray;
+    color: yellow;
+    height: 30px;
+    width: 150px;
+}
+.datos{
+    background-color: aliceblue;
+    height: 30px;
+    width: 150px;
+}
+
+.operacion{
+    display: flex;
+    justify-content: center;
+}
+.operacion>form>button{
+    background-color: blue;
+}
+
+button{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+
+ .item,.item1 ,.item2{
+    margin-top: 20px;
+}
+
+.registro{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.item2{
+    margin-left: 20px;
+}
+
+.pestaña{
+
+    margin-bottom: 0px;
+    vertical-align: 5px;
+    padding-bottom: 18px;
+}
+
+.registrar{
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+
+}
+
+.inicio > button{
+    margin-left: 100px;
+    border: none;
+    background-color: transparent;
+    color: blue;
+    font-size: 15px;
+}
+.ver {
+    margin-top: 135px;
+}
